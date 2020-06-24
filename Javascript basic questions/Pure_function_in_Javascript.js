@@ -6,7 +6,7 @@ const airport =  [{id: 1, name: 'LAX'}, {id:2, name: 'IAD'}]
 
 function change(airport, id, name){
     return airport.map(item => {
-        const tmp = Object.assign({}, item)
+        const tmp = Object.assign({}, item);
         if (item.id === id) {
             tmp.name = name;
         }
@@ -15,11 +15,11 @@ function change(airport, id, name){
 }
 const newAirport = (airport, id, name) => {
 	return airport.map(item => {
-  	 const tmp = Object.assign({}, item);
-     if (tmp.id === id){
-        tmp.name = name
-     }
-     return tmp
+         const tmp = Object.assign({}, item);
+         if (tmp.id === id){
+            tmp.name = name;
+         }
+     return tmp;
   })
 }
 const newAirportName = newAirport(airport,1,'EWR');
